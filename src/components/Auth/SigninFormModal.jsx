@@ -11,8 +11,6 @@ const SigninFormModal = () => {
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');
 
-   let privateKey = process.env.REACT_APP_PRIVATE_KEY
-
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -37,7 +35,7 @@ const SigninFormModal = () => {
         method: 'post',
         url: 'https://api.chatengine.io/users/',
         headers: {
-          'PRIVATE-KEY': privateKey
+          'PRIVATE-KEY': '029f2e25-1170-4cca-9b0d-be7796bedc49'
         },
         data: data,
       };

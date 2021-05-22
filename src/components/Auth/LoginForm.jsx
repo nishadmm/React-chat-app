@@ -14,14 +14,12 @@ const LoginForm = () => {
   const [Password, setpassword] = useState('');
   const [loading, setLoading] = useState(false);
 
-  let projectID = process.env.REACT_APP_PROJECT_ID
-
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     const authObject = {
-      'Project-ID': projectID,
+      'Project-ID': '3c835762-2520-4fd6-bfdf-e6a3fb2296db',
       'User-Name': Username,
       'User-Secret': Password,
     };

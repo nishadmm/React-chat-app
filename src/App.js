@@ -11,13 +11,11 @@ const App = () => {
     // eslint-disable-next-line
   }, []);
 
-  let projectID = process.env.REACT_APP_PROJECT_ID
-
   if (!localStorage.getItem('username')) return <LoginForm />;
   return (
     <ChatEngine
       height='98vh'
-      projectID={projectID}
+      projectID='3c835762-2520-4fd6-bfdf-e6a3fb2296db'
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
       renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
